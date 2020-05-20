@@ -17,7 +17,7 @@ jobs:
       run: sudo apt-get update
     
     - name: Install Dep
-      run: sudo apt-get -y install tar xz
+      run: sudo apt-get -y install tar xz-utils
     
     - name: List Files
       run: ls -l
