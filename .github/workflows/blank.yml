@@ -17,13 +17,19 @@ jobs:
       run: sudo apt-get update
     
     - name: Install Dep
-      run: sudo apt-get -y install tar
+      run: sudo apt-get -y install tar xz
     
     - name: List Files
       run: ls -l
     
+    - name: mkdir
+      run: mkdir learnopencv
+    
+    - name: move
+      run: mv -fv * learnopencv/ 
+    
     - name: tar
-      run: tar -Jcvf learnopencv.tar.xz .
+      run: tar -Jcvf learnopencv.tar.xz learnopencv/
 
     - name: Upload artifact
       uses: actions/upload-artifact@v1.0.0
