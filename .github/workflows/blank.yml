@@ -23,7 +23,7 @@ jobs:
       run: ls -l
     
     - name: mkdir
-      run: mkdir learnopencv
+      run: mkdir tuts
     
     - name: move
       run: mv -fv * tuts/ 
