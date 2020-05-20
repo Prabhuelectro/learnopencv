@@ -1,0 +1,32 @@
+name: C/C++ CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Update 
+      run: sudo apt-get update
+    
+    - name: Install Dep
+      run: sudo apt-get -y install tar
+    
+    - name: List Files
+      run: ls -l
+    
+    - name: tar
+      run: tar -Jcvf learnopencv.tar.xz .
+
+    - name: Upload artifact
+      uses: actions/upload-artifact@v1.0.0
+      with:
+        name: OS
+        path: learnopencv.tar.xz
