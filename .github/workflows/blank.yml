@@ -26,10 +26,10 @@ jobs:
       run: mkdir learnopencv
     
     - name: move
-      run: mv -fv * learnopencv/ 
+      run: mv -fv * tuts/ 
     
     - name: tar
-      run: tar -Jcvf learnopencv.tar.xz learnopencv/
+      run: tar -Jcvf learnopencv.tar.xz tuts/
 
     - name: Upload artifact
       uses: actions/upload-artifact@v1.0.0
