@@ -25,12 +25,8 @@ jobs:
     - name: mkdir
       run: mkdir tuts
     
-#    - name: move
-#      run: mv -fv * tuts/ 
-    
     - name: tar
       run: tar -Jcvf learnopencv.tar.xz *
-#      run: tar -Jcvf learnopencv.tar.xz tuts/
 
     - name: Upload artifact
       uses: actions/upload-artifact@v1.0.0
